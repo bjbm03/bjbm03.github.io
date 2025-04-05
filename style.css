@@ -1,0 +1,520 @@
+/* Variables de color */
+:root {
+    --vinotinto: #862633;
+    --vinotinto-claro: #a33143;
+    --amarillo: #FFD700;
+    --amarillo-oscuro: #CCAC00;
+    --azul-rey: #002366;
+    --azul-rey-claro: #003399;
+    --blanco: #ffffff;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar mejorado */
+.navbar {
+    background-color: var(--vinotinto) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--amarillo);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--amarillo) !important;
+    transform: translateY(-2px);
+}
+
+.nav-link i {
+    margin-right: 5px;
+}
+
+.header-img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+/* Banner con imagen de fondo */
+.banner-container {
+    background-image: url('https://mindeporte.gob.ve/wp-content/uploads/2024/09/head-mindeporte-back-1.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.banner-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(134, 38, 51, 0.7);
+}
+
+.banner-text {
+    position: relative;
+    z-index: 1;
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Tarjetas mejoradas */
+.card-header {
+    font-weight: 600;
+}
+
+.bg-vinotinto {
+    background-color: var(--vinotinto) !important;
+}
+
+.bg-azul-rey {
+    background-color: var(--azul-rey) !important;
+}
+
+/* Transiciones y animaciones */
+.transition-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.transition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Contenido de secciones */
+.content-section {
+    padding: 20px 0;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+footer {
+    background-color: var(--vinotinto) !important;
+    color: white !important;
+    border-top: 3px solid var(--amarillo);
+    padding: 1rem 0;
+}
+
+footer a {
+    color: var(--amarillo) !important;
+}
+
+footer .btn-warning {
+    background-color: var(--amarillo) !important;
+    color: var(--vinotinto) !important;
+    border-color: var(--amarillo) !important;
+}
+
+footer .btn-warning:hover {
+    background-color: var(--amarillo-oscuro) !important;
+    border-color: var(--amarillo-oscuro) !important;
+}
+
+footer .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--amarillo);
+    color: white;
+}
+
+footer .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+/* Estilos para los patrocinantes */
+.sponsor-container {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sponsor-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .sponsor-container {
+        width: 150px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sponsor-container {
+        width: 120px;
+        height: 60px;
+    }
+}
+.card-header.bg-info {
+    background-color: var(--azul-rey) !important;
+    color: white;
+}
+
+.card-header.bg-success {
+    background-color: var(--vinotinto) !important;
+    color: white;
+}
+
+.card-header.bg-secondary {
+    background-color: var(--azul-rey) !important;
+    color: white;
+}
+
+.card-header.bg-dark {
+    background-color: var(--vinotinto) !important;
+    color: white;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--vinotinto);
+    border-color: var(--vinotinto);
+}
+
+.btn-primary:hover {
+    background-color: var(--vinotinto-claro);
+    border-color: var(--vinotinto-claro);
+}
+
+.btn-success {
+    background-color: var(--amarillo);
+    border-color: var(--amarillo);
+    color: var(--vinotinto);
+    font-weight: bold;
+}
+
+.btn-success:hover {
+    background-color: var(--amarillo-oscuro);
+    border-color: var(--amarillo-oscuro);
+    color: var(--vinotinto);
+}
+
+.btn-warning {
+    background-color: var(--amarillo);
+    border-color: var(--amarillo);
+    color: var(--vinotinto);
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: var(--azul-rey);
+    border-color: var(--azul-rey);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: var(--azul-rey-claro);
+    border-color: var(--azul-rey-claro);
+}
+
+/* Barra de progreso */
+.progress-bar {
+    background-color: var(--vinotinto);
+}
+
+/* Estados de participantes */
+.disqualified {
+    background-color: rgba(134, 38, 51, 0.15) !important;
+    text-decoration: line-through;
+    color: var(--vinotinto);
+}
+
+.completed {
+    background-color: rgba(255, 215, 0, 0.2) !important;
+    font-weight: bold;
+}
+
+/* Tablas */
+.table thead {
+    background-color: var(--azul-rey);
+    color: white;
+}
+
+/* Efecto hover en filas */
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+#cronometroDisplay {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--vinotinto);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    #cronometroDisplay {
+        font-size: 1.8rem;
+    }
+}
+/* Estilos para la sección de disciplinas */
+.disciplinas-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 3px solid var(--amarillo);
+    border-bottom: 3px solid var(--amarillo);
+}
+
+.disciplina-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    height: 300px; 
+}
+
+.disciplina-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.disciplina-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.disciplina-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, var(--vinotinto), transparent);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.disciplina-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.disciplina-overlay p {
+    margin: 0;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .disciplina-card {
+        height: 250px;
+    }
+    
+    .disciplina-overlay h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .disciplina-card {
+        height: 200px;
+    }
+    
+    .disciplina-overlay {
+        padding: 10px;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('img/Background Ghibli.jpg') center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+/* Text colors */
+.text-vinotinto {
+    color: var(--vinotinto);
+}
+
+/* Disciplinas */
+.disciplina-img {
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--amarillo);
+}
+
+/* Cards */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        text-align: center;
+    }
+    
+    .hero-section .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .disciplina-img {
+        height: 200px;
+    }
+}
+/* Home Section */
+#home-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+/* Content Section Animation */
+.content-section {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Minimal Card */
+.card {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#toggleVelocidad {
+    transition: all 0.3s ease;
+}
+
+#toggleVelocidad:hover {
+    transform: scale(1.05);
+}
+
+#toggleVelocidad:active {
+    transform: scale(0.95);
+}
+/* Estilos para el modal de confirmación */
+.modal-header.bg-warning {
+    background-color: var(--amarillo);
+    color: var(--vinotinto);
+}
+
+#confirmModal .modal-footer .btn-primary {
+    background-color: var(--vinotinto);
+    border-color: var(--vinotinto);
+}
+/* Selector de participantes */
+.participantes-select-container {
+    position: relative;
+}
+
+#selectParticipantes {
+    min-height: 120px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--azul-rey);
+}
+
+#selectParticipantes option {
+    padding: 8px;
+    margin: 2px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#selectParticipantes option:hover {
+    background-color: rgba(0, 35, 102, 0.1);
+}
+
+#selectParticipantes option:checked {
+    background-color: var(--azul-rey);
+    color: white;
+}
+
+/* Botones de selección */
+#seleccionarTodos, #deseleccionarTodos {
+    transition: all 0.2s;
+}
+
+#seleccionarTodos:hover {
+    background-color: var(--azul-rey);
+    color: white;
+}
+
+#deseleccionarTodos:hover {
+    background-color: var(--vinotinto);
+    color: white;
+}
